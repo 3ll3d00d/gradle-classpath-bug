@@ -1,0 +1,10 @@
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.d00d:simple-plugin:1.0'
+    }
+}
+
+apply plugin: 'com.d00d.root-plugin'

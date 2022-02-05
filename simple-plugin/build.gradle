@@ -1,0 +1,25 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+    id 'maven-publish'
+}
+
+group 'com.d00d'
+version '1.0'
+
+repositories {
+    mavenLocal()
+}
+
+gradlePlugin {
+    plugins {
+        root {
+            id = 'com.d00d.root-plugin'
+            implementationClass = 'org.d00d.RootPlugin'
+        }
+        included {
+            id = 'com.d00d.included-plugin'
+            implementationClass = 'org.d00d.IncludedPlugin'
+        }
+    }
+}
